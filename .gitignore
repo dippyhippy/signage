@@ -1,7 +1,10 @@
-/.idea
+.idea
 /node_modules/
 /browser/
 /components/*/
 /spec/*.js
 /spec/*.xml
 flowhub.json
+
+signage-server
+signage-browser

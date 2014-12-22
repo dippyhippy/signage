@@ -4,8 +4,7 @@
   "author": "Ben Major <ben@godalming.it>",
   "repo": "root/signage",
   "version": "0.0.1",
-  "keywords": [
-  ],
+  "keywords": [],
   "dependencies": {
     "noflo/noflo": "*"
   },
@@ -13,6 +12,15 @@
     "https://raw.githubusercontent.com"
   ],
   "scripts": [
-    "index.js"
-  ]
+    "index.js",
+    "components/DoSomething.coffee"
+  ],
+  "json": [
+    "component.json"
+  ],
+  "noflo": {
+    "components": {
+      "DoSomething": "components/DoSomething.coffee"
+    }
+  }
 }
