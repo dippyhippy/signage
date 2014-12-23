@@ -1,12 +1,33 @@
-/**
- * Created by root on 23/12/14.
- */
-var loader = function(loader, done) {
+var nano = require('nano')('http://localhost:5984');
+
+var loader = function (loader, done) {
     console.log('loading components');
 
-    console.log('registerComponent: %s', typeof(loader.registerComponent)==='function');
-    console.log('registerGraph: %s', typeof(loader.registerGraph)==='function');
+    var db = nano.use('signage');
 
+    console.log('registerComponent: %s', typeof(loader.registerComponent) === 'function');
+
+    db.view('signage', 'components', function (err, res) {
+        if (!err) {
+            res.rows.forEach(function (doc) {
+                console.log(doc.value);
+            });
+        } else {
+            done(err);
+        }
+    });
+
+    console.log('registerGraph: %s', typeof(loader.registerGraph) === 'function');
+
+    db.view('signage', 'graphs', function (err, res) {
+        if (!err) {
+            res.rows.forEach(function (doc) {
+                console.log(doc.value);
+            });
+        } else {
+            done(err);
+        }
+    });
 
     done();
 };
