@@ -22,7 +22,7 @@ var loader = function (loader, done) {
             if (!err) {
                 res.rows.forEach(function (doc) {
                     console.log('registering component %s', doc.id);
-                    loader.registerGraph('signage', doc.id, {
+                    loader.registerGraph('signage', 'helloworld', 'signage/helloworld',{
                         getComponent: function () {
                             console.log('getComponent...');
                             return doc.json;
