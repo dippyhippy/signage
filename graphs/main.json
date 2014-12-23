@@ -1,0 +1,24 @@
+{
+    "properties": {
+        "name": "main",
+        "environment": {
+            "type": "noflo-nodejs"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "signage-server/main_9o785": {
+            "component": "signage-server/main",
+            "metadata": {
+                "label": "signage-server/main",
+                "x": 334,
+                "y": 100,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": []
+}
