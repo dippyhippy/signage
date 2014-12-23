@@ -10,7 +10,7 @@ var loader = function (loader, done) {
     db.view('signage', 'components', function (err, res) {
         if (!err) {
             res.rows.forEach(function (doc) {
-                console.log(doc.value);
+                console.log(doc);
             });
         } else {
             done(err);
@@ -29,7 +29,7 @@ var loader = function (loader, done) {
         }
     });
 
-    done();
+    done(null);
 };
 
 module.exports = loader;
