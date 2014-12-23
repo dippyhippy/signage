@@ -23,7 +23,7 @@
     "noflo": "~0.5.0",
     "noflo-core": "^0.1.11",
     "noflo-nodejs": "0.0.6",
-    "signage-server": "git://github.com/dippyhippy/signage-server"
+    "signage-server": "dippyhippy/signage-server"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
