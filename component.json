@@ -13,9 +13,6 @@
   ],
   "scripts": [
     "index.js",
-    "components/DoSomething.coffee",
-    "graphs/import.fbp",
-    "src/data/data access components/DoSomething.coffee",
     "src/data/dac/DoSomething.coffee",
     "src/data/service agents/DoSomething2.coffee"
   ],
