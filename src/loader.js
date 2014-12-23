@@ -17,24 +17,26 @@ var loader = function (loader, done) {
         }
     });
 
-    console.log('registerGraph: %s', typeof(loader.registerGraph) === 'function');
-
-    db.view('signage', 'graphs', function (err, res) {
-        if (!err) {
-            res.rows.forEach(function (doc) {
-                loader.registerGraph('signage', doc.id, {
-                    getComponent: function () {
-                        return doc.json;
-                    }
+    if (typeof(loader.registerGraph) === 'function') {
+        db.view('signage', 'graphs', function (err, res) {
+            if (!err) {
+                res.rows.forEach(function (doc) {
+                    console.log('registering component %s', doc.id);
+                    loader.registerGraph('signage', doc.id, {
+                        getComponent: function () {
+                            console.log('getComponent...');
+                            return doc.json;
+                        }
+                    });
+                    console.log(doc);
                 });
-                console.log(doc);
-            });
-        } else {
-            done(err);
-        }
-    });
+            } else {
+                done(err);
+            }
+        });
+    }
 
-    done(null);
+    done();
 };
 
 module.exports = loader;
