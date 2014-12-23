@@ -45,6 +45,7 @@
     },
     "graphs": {
       "main": "src/main.json"
-    }
+    },
+    "loader": "src/loader.js"
   }
 }
