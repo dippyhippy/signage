@@ -22,7 +22,7 @@ var loader = function (loader, done) {
     db.view('signage', 'graphs', function (err, res) {
         if (!err) {
             res.rows.forEach(function (doc) {
-                console.log(doc.value);
+                console.log(doc);
             });
         } else {
             done(err);
