@@ -1,0 +1,13 @@
+{
+    "properties": {
+        "name": "test",
+        "environment": {
+            "type": "noflo-nodejs"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {},
+    "connections": []
+}
