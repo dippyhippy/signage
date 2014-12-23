@@ -25,6 +25,7 @@
     "noflo-couchdb": "^1.0.1",
     "noflo-nodejs": "0.0.6",
     "noflo-objects": "^0.1.12",
+    "noflo-strings": "^0.1.9",
     "signage-server": "0.0.2"
   },
   "devDependencies": {
