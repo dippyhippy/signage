@@ -13,7 +13,8 @@
   ],
   "scripts": [
     "index.js",
-    "components/DoSomething.coffee"
+    "components/DoSomething.coffee",
+    "graphs/import.fbp"
   ],
   "json": [
     "component.json"
@@ -21,6 +22,12 @@
   "noflo": {
     "components": {
       "DoSomething": "components/DoSomething.coffee"
+    },
+    "graphs": {
+      "import": "graphs/import.fbp"
     }
-  }
+  },
+  "fbp": [
+    "graphs/import.fbp"
+  ]
 }

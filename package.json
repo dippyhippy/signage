@@ -39,13 +39,14 @@
   },
   "keywords": [],
   "noflo": {
-    "components": {
-      "DoSomething": "components/DoSomething.coffee"
-    },
     "graphs": {
+      "import": "graphs/import.fbp",
       "main": "graphs/main.json",
       "test": "graphs/test.json",
-      "helloworld2": "graphs/test/helloworld.json"
+      "helloworld": "graphs/test/import.fbp"
+    },
+    "components": {
+      "DoSomething": "components/DoSomething.coffee"
     }
   }
 }
