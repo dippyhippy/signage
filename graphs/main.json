@@ -9,12 +9,22 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "signage-server/main_9o785": {
-            "component": "signage-server/main",
+        "core/Output_lvoku": {
+            "component": "core/Output",
             "metadata": {
-                "label": "signage-server/main",
-                "x": 334,
-                "y": 100,
+                "label": "core/Output",
+                "x": 396,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "signage/Create Graph_2u0p9": {
+            "component": "signage/Create Graph",
+            "metadata": {
+                "label": "signage/Create Graph",
+                "x": 256.87240356083083,
+                "y": 70.7299703264095,
                 "width": 72,
                 "height": 72
             }
