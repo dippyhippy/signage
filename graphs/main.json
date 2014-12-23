@@ -9,26 +9,74 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "core/Output_lvoku": {
+        "core/Output_md3wp": {
             "component": "core/Output",
             "metadata": {
                 "label": "core/Output",
-                "x": 396,
-                "y": 72,
+                "x": 468,
+                "y": 36,
                 "width": 72,
                 "height": 72
             }
         },
-        "signage/Create Graph_2u0p9": {
-            "component": "signage/Create Graph",
+        "signage/Create_Graph_tdsjl": {
+            "component": "signage/Create_Graph",
             "metadata": {
-                "label": "signage/Create Graph",
-                "x": 256.87240356083083,
-                "y": 70.7299703264095,
+                "label": "signage/Create_Graph",
+                "x": 216,
+                "y": 0,
                 "width": 72,
                 "height": 72
             }
         }
     },
-    "connections": []
+    "connections": [
+        {
+            "src": {
+                "process": "signage/Create_Graph_tdsjl",
+                "port": "graph"
+            },
+            "tgt": {
+                "process": "core/Output_md3wp",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "signage/Create_Graph_tdsjl",
+                "port": "log"
+            },
+            "tgt": {
+                "process": "core/Output_md3wp",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "signage/Create_Graph_tdsjl",
+                "port": "json"
+            },
+            "tgt": {
+                "process": "core/Output_md3wp",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "data": "helloworld",
+            "tgt": {
+                "process": "signage/Create_Graph_tdsjl",
+                "port": "name"
+            }
+        },
+        {
+            "data": "helloworld",
+            "tgt": {
+                "process": "signage/Create_Graph_tdsjl",
+                "port": "save"
+            }
+        }
+    ]
 }
