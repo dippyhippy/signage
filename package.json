@@ -21,8 +21,6 @@
   },
   "dependencies": {
     "noflo": "~0.5.0",
-    "noflo-browser-app": "git://github.com/noflo/noflo-browser-app",
-    "noflo-core": "^0.1.11",
     "noflo-nodejs": "0.0.6",
     "signage-server": "0.0.2"
   },
