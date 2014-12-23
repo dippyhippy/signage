@@ -42,6 +42,9 @@
   "noflo": {
     "components": {
       "DoSomething": "components/DoSomething.coffee"
+    },
+    "graphs": {
+      "main": "graphs/main.json"
     }
   }
 }
