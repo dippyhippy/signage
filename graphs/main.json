@@ -24,7 +24,7 @@
             "metadata": {
                 "label": "createGraph",
                 "x": 36,
-                "y": 72,
+                "y": 108,
                 "width": 72,
                 "height": 72
             }
@@ -34,7 +34,7 @@
             "metadata": {
                 "label": "couchdb/WriteDocument",
                 "x": 684,
-                "y": 144,
+                "y": 180,
                 "width": 72,
                 "height": 72
             }
@@ -43,8 +43,8 @@
             "component": "couchdb/CreateDatabaseIfNoneExists",
             "metadata": {
                 "label": "couchdb/CreateDatabaseIfNoneExists",
-                "x": 540,
-                "y": 36,
+                "x": 396,
+                "y": 0,
                 "width": 72,
                 "height": 72
             }
@@ -88,6 +88,16 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "couchdb/ReadDocument_m4nla": {
+            "component": "couchdb/ReadDocument",
+            "metadata": {
+                "label": "couchdb/ReadDocument",
+                "x": 612,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
@@ -99,17 +109,6 @@
             "tgt": {
                 "process": "core/Output_md3wp",
                 "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "couchdb/CreateDatabaseIfNoneExists_vv27e",
-                "port": "url"
-            },
-            "tgt": {
-                "process": "couchdb/WriteDocument_3066n",
-                "port": "url"
             },
             "metadata": {}
         },
@@ -144,17 +143,6 @@
             },
             "tgt": {
                 "process": "objects/SetPropertyValue_sl6fx",
-                "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "objects/SetPropertyValue_sl6fx",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "couchdb/WriteDocument_3066n",
                 "port": "in"
             },
             "metadata": {}
@@ -174,19 +162,6 @@
         },
         {
             "src": {
-                "process": "createGraph",
-                "port": "graph"
-            },
-            "tgt": {
-                "process": "objects/CreateObject_pqsng",
-                "port": "start"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
                 "process": "couchdb/WriteDocument_3066n",
                 "port": "log"
             },
@@ -195,6 +170,78 @@
                 "port": "in"
             },
             "metadata": {}
+        },
+        {
+            "src": {
+                "process": "couchdb/CreateDatabaseIfNoneExists_vv27e",
+                "port": "url"
+            },
+            "tgt": {
+                "process": "couchdb/ReadDocument_m4nla",
+                "port": "url"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "couchdb/WriteDocument_3066n",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Output_md3wp",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "couchdb/ReadDocument_m4nla",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Output_md3wp",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "couchdb/ReadDocument_m4nla",
+                "port": "log"
+            },
+            "tgt": {
+                "process": "objects/CreateObject_pqsng",
+                "port": "start"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "objects/SetPropertyValue_sl6fx",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "couchdb/WriteDocument_3066n",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "couchdb/CreateDatabaseIfNoneExists_vv27e",
+                "port": "url"
+            },
+            "tgt": {
+                "process": "couchdb/WriteDocument_3066n",
+                "port": "url"
+            },
+            "metadata": {
+                "route": 0
+            }
         },
         {
             "data": "http://localhost:5984/signage",
@@ -243,6 +290,13 @@
             "tgt": {
                 "process": "objects/SetPropertyValue_hkrq3",
                 "port": "property"
+            }
+        },
+        {
+            "data": "helloworld",
+            "tgt": {
+                "process": "couchdb/ReadDocument_m4nla",
+                "port": "in"
             }
         }
     ]
