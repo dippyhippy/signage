@@ -8,6 +8,17 @@
     "inports": {},
     "outports": {},
     "groups": [],
-    "processes": {},
+    "processes": {
+        "signage-server/test_g5r83": {
+            "component": "signage-server/test",
+            "metadata": {
+                "label": "signage-server/test",
+                "x": 334,
+                "y": 100,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
     "connections": []
 }
