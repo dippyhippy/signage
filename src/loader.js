@@ -22,7 +22,7 @@ var loader = function (loader, done) {
     db.view('signage', 'graphs', function (err, res) {
         if (!err) {
             res.rows.forEach(function (doc) {
-                loader.registerGraph(doc.id, doc.json);
+                loader.registerGraph('signage', doc.id, doc.json);
                 console.log(doc);
             });
         } else {
