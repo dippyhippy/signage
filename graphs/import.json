@@ -23,7 +23,7 @@
     },
     "connections": [
         {
-            "data": "test/main.json",
+            "data": "graphs/test/main.json",
             "tgt": {
                 "process": "Import",
                 "port": "graph"
