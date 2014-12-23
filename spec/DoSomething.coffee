@@ -1,7 +1,7 @@
 noflo = require 'noflo'
 unless noflo.isBrowser()
   chai = require 'chai' unless chai
-  DoSomething = require '../components/DoSomething.coffee'
+  DoSomething = require './DoSomething.coffee'
 else
   DoSomething = require 'signage/components/DoSomething.js'
 

@@ -7,8 +7,8 @@ module.exports = ->
     noflo_manifest:
       update:
         files:
-          'component.json': ['graphs/*', 'components/*']
-          'package.json': ['graphs/*', 'components/*']
+          'component.json': ['src/**']
+          'package.json': ['src/**']
 
     # CoffeeScript compilation of tests
     coffee:
