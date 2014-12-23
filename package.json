@@ -44,7 +44,8 @@
       "DoSomething": "components/DoSomething.coffee"
     },
     "graphs": {
-      "main": "graphs/main.json"
+      "main": "graphs/main.json",
+      "test": "graphs/test.json"
     }
   }
 }
