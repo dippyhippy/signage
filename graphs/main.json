@@ -28,6 +28,16 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "couchdb/WriteDocument_3066n": {
+            "component": "couchdb/WriteDocument",
+            "metadata": {
+                "label": "couchdb/WriteDocument",
+                "x": 360,
+                "y": 108,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
