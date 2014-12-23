@@ -24,7 +24,7 @@
     "noflo-browser-app": "git://github.com/noflo/noflo-browser-app",
     "noflo-core": "^0.1.11",
     "noflo-nodejs": "0.0.6",
-    "signage-server": "git://github.com/dippyhippy/signage-server"
+    "signage-server": "0.0.2"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
