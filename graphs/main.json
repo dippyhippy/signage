@@ -43,8 +43,8 @@
             "component": "couchdb/CreateDatabaseIfNoneExists",
             "metadata": {
                 "label": "couchdb/CreateDatabaseIfNoneExists",
-                "x": 396,
-                "y": 0,
+                "x": 360,
+                "y": -36,
                 "width": 72,
                 "height": 72
             }
@@ -73,7 +73,7 @@
             "component": "objects/SetPropertyValue",
             "metadata": {
                 "label": "objects/SetPropertyValue",
-                "x": 540,
+                "x": 576,
                 "y": 180,
                 "width": 72,
                 "height": 72
@@ -93,8 +93,8 @@
             "component": "couchdb/ReadDocument",
             "metadata": {
                 "label": "couchdb/ReadDocument",
-                "x": 612,
-                "y": 72,
+                "x": 576,
+                "y": 36,
                 "width": 72,
                 "height": 72
             }
@@ -109,8 +109,7 @@
             "tgt": {
                 "process": "core/Output_md3wp",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -120,8 +119,7 @@
             "tgt": {
                 "process": "objects/SetPropertyValue_hkrq3",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -144,8 +142,7 @@
             "tgt": {
                 "process": "objects/SetPropertyValue_sl6fx",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -168,8 +165,7 @@
             "tgt": {
                 "process": "core/Output_md3wp",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -192,8 +188,7 @@
             "tgt": {
                 "process": "core/Output_md3wp",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -203,8 +198,7 @@
             "tgt": {
                 "process": "core/Output_md3wp",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -227,8 +221,7 @@
             "tgt": {
                 "process": "couchdb/WriteDocument_3066n",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
