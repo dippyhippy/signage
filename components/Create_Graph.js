@@ -1,7 +1,5 @@
 var noflo = require('noflo');
 
-console.dir(noflo);
-
 exports.getComponent = function () {
   var c = new noflo.Component(),
       g = new noflo.Graph();
@@ -47,7 +45,7 @@ exports.getComponent = function () {
   c.outPorts.add('log');
   c.outPorts.add('json');
   
-  noflo.ComponentLoader.registerGraph('helloworld','helloworld',g);
+  noflo.ComponentLoader.registerGraph('helloworld','helloworld',{'getComponent': function() {return g});
   
   return c;
 };

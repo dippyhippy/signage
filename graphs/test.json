@@ -13,7 +13,7 @@
         "Test": {
             "component": "helloworld/helloworld",
             "metadata": {
-                "x": 0,
+                "x": 36,
                 "y": 36,
                 "width": 72,
                 "height": 72,
