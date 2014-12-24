@@ -1,4 +1,5 @@
-var nano = require('nano')('http://localhost:5984');
+var nano = require('nano')('http://localhost:5984'),
+    noflo = require('noflo');
 
 var loader = function (loader, done) {
     console.log('loading components');
@@ -22,10 +23,9 @@ var loader = function (loader, done) {
             if (!err) {
                 res.rows.forEach(function (doc) {
                     console.log('registering component %s', doc.id);
-                    loader.registerGraph('signage', 'helloworld', 'signage/helloworld',{
+                    loader.registerGraph('helloworld', doc.id, {
                         getComponent: function () {
-                            console.log('getComponent...');
-                            return doc.json;
+                            return new noflo.Graph(doc.json);
                         }
                     });
                     console.log(doc);
