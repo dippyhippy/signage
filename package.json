@@ -45,8 +45,7 @@
   "noflo": {
     "components": {
       "DoSomething": "src/data/dac/DoSomething.coffee",
-      "DoSomething2": "src/data/service agents/DoSomething2.coffee",
-      "helloworld": "helloworld/helloworld"
+      "DoSomething2": "src/data/service agents/DoSomething2.coffee"
     },
     "graphs": {
       "main": "src/main.json"
