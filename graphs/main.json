@@ -19,16 +19,6 @@
                 "height": 72
             }
         },
-        "createGraph": {
-            "component": "signage/Create_Graph",
-            "metadata": {
-                "label": "createGraph",
-                "x": 72,
-                "y": 36,
-                "width": 72,
-                "height": 72
-            }
-        },
         "couchdb/WriteDocument_3066n": {
             "component": "couchdb/WriteDocument",
             "metadata": {
@@ -43,7 +33,7 @@
             "component": "couchdb/CreateDatabaseIfNoneExists",
             "metadata": {
                 "label": "couchdb/CreateDatabaseIfNoneExists",
-                "x": 360,
+                "x": 396,
                 "y": -36,
                 "width": 72,
                 "height": 72
@@ -73,7 +63,7 @@
             "component": "objects/SetPropertyValue",
             "metadata": {
                 "label": "objects/SetPropertyValue",
-                "x": 576,
+                "x": 540,
                 "y": 180,
                 "width": 72,
                 "height": 72
@@ -93,8 +83,8 @@
             "component": "couchdb/ReadDocument",
             "metadata": {
                 "label": "couchdb/ReadDocument",
-                "x": 576,
-                "y": 36,
+                "x": 612,
+                "y": 72,
                 "width": 72,
                 "height": 72
             }
@@ -109,7 +99,8 @@
             "tgt": {
                 "process": "core/Output_md3wp",
                 "port": "in"
-            }
+            },
+            "metadata": {}
         },
         {
             "src": {
@@ -119,7 +110,8 @@
             "tgt": {
                 "process": "objects/SetPropertyValue_hkrq3",
                 "port": "in"
-            }
+            },
+            "metadata": {}
         },
         {
             "src": {
@@ -142,20 +134,8 @@
             "tgt": {
                 "process": "objects/SetPropertyValue_sl6fx",
                 "port": "in"
-            }
-        },
-        {
-            "src": {
-                "process": "createGraph",
-                "port": "graph"
             },
-            "tgt": {
-                "process": "objects/SetPropertyValue_sl6fx",
-                "port": "value"
-            },
-            "metadata": {
-                "route": null
-            }
+            "metadata": {}
         },
         {
             "src": {
@@ -165,7 +145,8 @@
             "tgt": {
                 "process": "core/Output_md3wp",
                 "port": "in"
-            }
+            },
+            "metadata": {}
         },
         {
             "src": {
@@ -188,7 +169,8 @@
             "tgt": {
                 "process": "core/Output_md3wp",
                 "port": "in"
-            }
+            },
+            "metadata": {}
         },
         {
             "src": {
@@ -198,7 +180,8 @@
             "tgt": {
                 "process": "core/Output_md3wp",
                 "port": "in"
-            }
+            },
+            "metadata": {}
         },
         {
             "src": {
@@ -221,7 +204,8 @@
             "tgt": {
                 "process": "couchdb/WriteDocument_3066n",
                 "port": "in"
-            }
+            },
+            "metadata": {}
         },
         {
             "src": {
@@ -269,13 +253,6 @@
             "tgt": {
                 "process": "objects/SetPropertyValue_zqzoi",
                 "port": "value"
-            }
-        },
-        {
-            "data": "helloworld",
-            "tgt": {
-                "process": "createGraph",
-                "port": "name"
             }
         },
         {
