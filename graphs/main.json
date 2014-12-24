@@ -23,8 +23,8 @@
             "component": "signage/Create_Graph",
             "metadata": {
                 "label": "createGraph",
-                "x": 36,
-                "y": 108,
+                "x": 72,
+                "y": 36,
                 "width": 72,
                 "height": 72
             }
