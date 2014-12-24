@@ -5,6 +5,7 @@ exports.getComponent = function () {
       g = new noflo.Graph();
   
   g.outPorts.add('json');
+  g.outPorts.add('log');
   
   g.inPorts.add('save', function (event, payload) {
     
@@ -43,9 +44,6 @@ exports.getComponent = function () {
   
   c.outPorts.add('graph');
   c.outPorts.add('log');
-  c.outPorts.add('json');
-  
-  noflo.ComponentLoader.registerGraph('helloworld','helloworld',{'getComponent': function() {return g});
   
   return c;
 };

@@ -88,6 +88,16 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "signage/Create_Graph_kqwb9": {
+            "component": "signage/Create_Graph",
+            "metadata": {
+                "label": "signage/Create_Graph",
+                "x": 216,
+                "y": 0,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
@@ -99,8 +109,7 @@
             "tgt": {
                 "process": "core/Output_md3wp",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -110,8 +119,7 @@
             "tgt": {
                 "process": "objects/SetPropertyValue_hkrq3",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -134,8 +142,7 @@
             "tgt": {
                 "process": "objects/SetPropertyValue_sl6fx",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -145,8 +152,7 @@
             "tgt": {
                 "process": "core/Output_md3wp",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -169,8 +175,7 @@
             "tgt": {
                 "process": "core/Output_md3wp",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -180,8 +185,7 @@
             "tgt": {
                 "process": "core/Output_md3wp",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -204,8 +208,7 @@
             "tgt": {
                 "process": "couchdb/WriteDocument_3066n",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
