@@ -2,8 +2,9 @@
     "properties": {
         "name": "main",
         "environment": {
-            "type": "noflo-nodejs"
-        }
+            "type": "all"
+        },
+        "icon": ""
     },
     "inports": {
         "db": {
@@ -56,7 +57,7 @@
             "metadata": {
                 "label": "couchdb/WriteDocument",
                 "x": 1152,
-                "y": 180,
+                "y": 144,
                 "width": 72,
                 "height": 72
             }
@@ -171,8 +172,7 @@
             "tgt": {
                 "process": "objects/SetPropertyValue_hkrq3",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -195,8 +195,7 @@
             "tgt": {
                 "process": "objects/SetPropertyValue_sl6fx",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -206,8 +205,7 @@
             "tgt": {
                 "process": "core/Output_md3wp",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -230,8 +228,7 @@
             "tgt": {
                 "process": "core/Output_md3wp",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -241,8 +238,7 @@
             "tgt": {
                 "process": "core/Output_md3wp",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -252,8 +248,7 @@
             "tgt": {
                 "process": "strings/Jsonify_4uksx",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -263,8 +258,7 @@
             "tgt": {
                 "process": "objects/SetPropertyValue_sl6fx",
                 "port": "value"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -313,8 +307,7 @@
             "tgt": {
                 "process": "couchdb/WriteDocument_3066n",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -337,8 +330,7 @@
             "tgt": {
                 "process": "couchdb/ReadDocument_m4nla",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -361,8 +353,7 @@
             "tgt": {
                 "process": "objects/CreateObject_pqsng",
                 "port": "start"
-            },
-            "metadata": {}
+            }
         },
         {
             "data": "http://localhost:5984/signage",
