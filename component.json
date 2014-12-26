@@ -12,20 +12,9 @@
     "https://raw.githubusercontent.com"
   ],
   "scripts": [
-    "index.js",
-    "src/data/dac/DoSomething.coffee",
-    "src/data/service agents/DoSomething2.coffee",
-    "src/loader.js"
+    "index.js"
   ],
   "json": [
     "component.json"
-  ],
-  "noflo": {
-    "components": {
-      "DoSomething": "src/data/dac/DoSomething.coffee",
-      "DoSomething2": "src/data/service agents/DoSomething2.coffee",
-      "loader": "src/loader.js"
-    },
-    "loader": "src/loader.js"
-  }
+  ]
 }

@@ -5,20 +5,427 @@
             "type": "noflo-nodejs"
         }
     },
-    "inports": {},
-    "outports": {},
-    "groups": [],
-    "processes": {
-        "signage-server/main_9o785": {
-            "component": "signage-server/main",
+    "inports": {
+        "db": {
+            "process": "couchdb/CreateDatabaseIfNoneExists_vv27e",
+            "port": "url",
             "metadata": {
-                "label": "signage-server/main",
-                "x": 334,
-                "y": 100,
+                "x": 36,
+                "y": 216,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "in": {
+            "process": "core/Split_tbcap",
+            "port": "in",
+            "metadata": {
+                "x": 36,
+                "y": 324,
                 "width": 72,
                 "height": 72
             }
         }
     },
-    "connections": []
+    "outports": {
+        "out": {
+            "process": "core/Output_md3wp",
+            "port": "out",
+            "metadata": {
+                "x": 1440,
+                "y": 216,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "groups": [],
+    "processes": {
+        "core/Output_md3wp": {
+            "component": "core/Output",
+            "metadata": {
+                "label": "core/Output",
+                "x": 1296,
+                "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "couchdb/WriteDocument_3066n": {
+            "component": "couchdb/WriteDocument",
+            "metadata": {
+                "label": "couchdb/WriteDocument",
+                "x": 1152,
+                "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "couchdb/CreateDatabaseIfNoneExists_vv27e": {
+            "component": "couchdb/CreateDatabaseIfNoneExists",
+            "metadata": {
+                "label": "couchdb/CreateDatabaseIfNoneExists",
+                "x": 144,
+                "y": 216,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "objects/CreateObject_pqsng": {
+            "component": "objects/CreateObject",
+            "metadata": {
+                "label": "objects/CreateObject",
+                "x": 432,
+                "y": 216,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "objects/SetPropertyValue_hkrq3": {
+            "component": "objects/SetPropertyValue",
+            "metadata": {
+                "label": "objects/SetPropertyValue",
+                "x": 576,
+                "y": 216,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "objects/SetPropertyValue_sl6fx": {
+            "component": "objects/SetPropertyValue",
+            "metadata": {
+                "label": "objects/SetPropertyValue",
+                "x": 864,
+                "y": 216,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "objects/SetPropertyValue_zqzoi": {
+            "component": "objects/SetPropertyValue",
+            "metadata": {
+                "label": "objects/SetPropertyValue",
+                "x": 720,
+                "y": 216,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "couchdb/ReadDocument_m4nla": {
+            "component": "couchdb/ReadDocument",
+            "metadata": {
+                "label": "couchdb/ReadDocument",
+                "x": 288,
+                "y": 252,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "signage/Create_Graph_1v9rj": {
+            "component": "signage/Create_Graph",
+            "metadata": {
+                "label": "signage/Create_Graph",
+                "x": 576,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "strings/Jsonify_4uksx": {
+            "component": "strings/Jsonify",
+            "metadata": {
+                "label": "strings/Jsonify",
+                "x": 720,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "objects/MergeObjects_96ve4": {
+            "component": "objects/MergeObjects",
+            "metadata": {
+                "label": "objects/MergeObjects",
+                "x": 1008,
+                "y": 216,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Split_tbcap": {
+            "component": "core/Split",
+            "metadata": {
+                "label": "core/Split",
+                "x": 144,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "objects/CreateObject_pqsng",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "objects/SetPropertyValue_hkrq3",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "objects/SetPropertyValue_hkrq3",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "objects/SetPropertyValue_zqzoi",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "objects/SetPropertyValue_zqzoi",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "objects/SetPropertyValue_sl6fx",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "couchdb/WriteDocument_3066n",
+                "port": "log"
+            },
+            "tgt": {
+                "process": "core/Output_md3wp",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "couchdb/CreateDatabaseIfNoneExists_vv27e",
+                "port": "url"
+            },
+            "tgt": {
+                "process": "couchdb/ReadDocument_m4nla",
+                "port": "url"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "couchdb/WriteDocument_3066n",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Output_md3wp",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "signage/Create_Graph_1v9rj",
+                "port": "log"
+            },
+            "tgt": {
+                "process": "core/Output_md3wp",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "signage/Create_Graph_1v9rj",
+                "port": "graph"
+            },
+            "tgt": {
+                "process": "strings/Jsonify_4uksx",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "strings/Jsonify_4uksx",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "objects/SetPropertyValue_sl6fx",
+                "port": "value"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "couchdb/CreateDatabaseIfNoneExists_vv27e",
+                "port": "url"
+            },
+            "tgt": {
+                "process": "couchdb/WriteDocument_3066n",
+                "port": "url"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "objects/SetPropertyValue_sl6fx",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "objects/MergeObjects_96ve4",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "couchdb/ReadDocument_m4nla",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "objects/MergeObjects_96ve4",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "objects/MergeObjects_96ve4",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "couchdb/WriteDocument_3066n",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "couchdb/CreateDatabaseIfNoneExists_vv27e",
+                "port": "log"
+            },
+            "tgt": {
+                "process": "core/Output_md3wp",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "core/Split_tbcap",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "couchdb/ReadDocument_m4nla",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/Split_tbcap",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "signage/Create_Graph_1v9rj",
+                "port": "name"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "couchdb/ReadDocument_m4nla",
+                "port": "log"
+            },
+            "tgt": {
+                "process": "objects/CreateObject_pqsng",
+                "port": "start"
+            },
+            "metadata": {}
+        },
+        {
+            "data": "http://localhost:5984/signage",
+            "tgt": {
+                "process": "couchdb/CreateDatabaseIfNoneExists_vv27e",
+                "port": "url"
+            }
+        },
+        {
+            "data": "helloworld",
+            "tgt": {
+                "process": "objects/SetPropertyValue_hkrq3",
+                "port": "value"
+            }
+        },
+        {
+            "data": "json",
+            "tgt": {
+                "process": "objects/SetPropertyValue_sl6fx",
+                "port": "property"
+            }
+        },
+        {
+            "data": "type",
+            "tgt": {
+                "process": "objects/SetPropertyValue_zqzoi",
+                "port": "property"
+            }
+        },
+        {
+            "data": "_id",
+            "tgt": {
+                "process": "objects/SetPropertyValue_hkrq3",
+                "port": "property"
+            }
+        },
+        {
+            "data": "helloworld",
+            "tgt": {
+                "process": "couchdb/ReadDocument_m4nla",
+                "port": "in"
+            }
+        },
+        {
+            "data": "helloworld",
+            "tgt": {
+                "process": "signage/Create_Graph_1v9rj",
+                "port": "name"
+            }
+        },
+        {
+            "data": "graph",
+            "tgt": {
+                "process": "objects/SetPropertyValue_zqzoi",
+                "port": "value"
+            }
+        },
+        {
+            "data": "helloworld",
+            "tgt": {
+                "process": "core/Split_tbcap",
+                "port": "in"
+            }
+        }
+    ]
 }
