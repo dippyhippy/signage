@@ -14,7 +14,8 @@
   "scripts": [
     "index.js",
     "src/data/dac/DoSomething.coffee",
-    "src/data/service agents/DoSomething2.coffee"
+    "src/data/service agents/DoSomething2.coffee",
+    "src/loader.js"
   ],
   "json": [
     "component.json"
@@ -22,11 +23,9 @@
   "noflo": {
     "components": {
       "DoSomething": "src/data/dac/DoSomething.coffee",
-      "DoSomething2": "src/data/service agents/DoSomething2.coffee"
+      "DoSomething2": "src/data/service agents/DoSomething2.coffee",
+      "loader": "src/loader.js"
     },
     "loader": "src/loader.js"
-  },
-  "fbp": [
-    "graphs/import.fbp"
-  ]
+  }
 }

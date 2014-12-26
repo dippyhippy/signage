@@ -23,6 +23,7 @@
     "nano": "^6.0.2",
     "noflo": "~0.5.0",
     "noflo-couchdb": "^1.0.1",
+    "noflo-flow": "^0.3.4",
     "noflo-nodejs": "0.0.6",
     "noflo-objects": "^0.1.12",
     "noflo-strings": "^0.1.9",
@@ -45,7 +46,8 @@
   "noflo": {
     "components": {
       "DoSomething": "src/data/dac/DoSomething.coffee",
-      "DoSomething2": "src/data/service agents/DoSomething2.coffee"
+      "DoSomething2": "src/data/service agents/DoSomething2.coffee",
+      "loader": "src/loader.js"
     },
     "graphs": {
       "main": "src/main.json"
