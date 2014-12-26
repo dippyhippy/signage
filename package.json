@@ -27,7 +27,7 @@
     "noflo-nodejs": "0.0.6",
     "noflo-objects": "^0.1.12",
     "noflo-strings": "^0.1.9",
-    "signage-server": "0.0.2"
+    "signage-comms": "git://github.com/dippyhippy/signage-comms"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
