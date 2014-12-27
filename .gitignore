@@ -5,7 +5,4 @@
 /spec/*.js
 /spec/*.xml
 flowhub.json
-
-signage-server
-signage-browser
-signage-data
+config.json
