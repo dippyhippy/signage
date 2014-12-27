@@ -1,20 +1,26 @@
 {
-  "name": "signage",
-  "description": "digital signage solution",
-  "author": "Ben Major <ben@godalming.it>",
-  "repo": "root/signage",
-  "version": "0.0.1",
-  "keywords": [],
-  "dependencies": {
-    "noflo/noflo": "*"
-  },
-  "remotes": [
-    "https://raw.githubusercontent.com"
-  ],
+  "name": "fbp",
+  "description": "Parser for the .fbp flow definition language",
+  "version": "1.0.0",
   "scripts": [
-    "index.js"
+    "graphs/LoadConfiguration.json",
+    "graphs/main.json",
+    "components/DefaultConfig.coffee"
   ],
+  "main": "lib/fbp.js",
+  "repo": "https://raw.githubusercontent.com/noflo/fbp",
   "json": [
+    "graphs/LoadConfiguration.json",
+    "graphs/main.json",
     "component.json"
-  ]
+  ],
+  "noflo": {
+    "graphs": {
+      "LoadConfiguration": "graphs/LoadConfiguration.json",
+      "main": "graphs/main.json"
+    },
+    "components": {
+      "DefaultConfig": "components/DefaultConfig.coffee"
+    }
+  }
 }
