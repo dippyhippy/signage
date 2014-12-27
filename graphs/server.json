@@ -8,17 +8,6 @@
     "inports": {},
     "outports": {},
     "groups": [],
-    "processes": {
-        "signage-comms/main_u5qho": {
-            "component": "signage-comms/main",
-            "metadata": {
-                "label": "signage-comms/main",
-                "x": 252,
-                "y": 108,
-                "width": 72,
-                "height": 72
-            }
-        }
-    },
+    "processes": {},
     "connections": []
 }

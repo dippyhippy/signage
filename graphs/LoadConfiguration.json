@@ -13,8 +13,8 @@
             "component": "filesystem/ReadFile",
             "metadata": {
                 "label": "filesystem/ReadFile",
-                "x": -36,
-                "y": 36,
+                "x": 0,
+                "y": 72,
                 "width": 72,
                 "height": 72
             }
@@ -23,7 +23,7 @@
             "component": "core/Output",
             "metadata": {
                 "label": "core/Output",
-                "x": 288,
+                "x": 360,
                 "y": 36,
                 "width": 72,
                 "height": 72
@@ -53,8 +53,18 @@
             "component": "signage/DefaultConfig",
             "metadata": {
                 "label": "DefaultConfig",
-                "x": 180,
-                "y": 216,
+                "x": 0,
+                "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "strings/ParseJson_7hwpd": {
+            "component": "strings/ParseJson",
+            "metadata": {
+                "label": "strings/ParseJson",
+                "x": 144,
+                "y": 180,
                 "width": 72,
                 "height": 72
             }
@@ -112,6 +122,19 @@
         {
             "src": {
                 "process": "DefaultConfig",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "strings/ParseJson_7hwpd",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "strings/ParseJson_7hwpd",
                 "port": "out"
             },
             "tgt": {
