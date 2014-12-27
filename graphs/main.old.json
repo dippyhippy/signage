@@ -9,22 +9,22 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "signage-comms/main_bss9t": {
-            "component": "signage-comms/main",
-            "metadata": {
-                "label": "signage-comms/main",
-                "x": 252,
-                "y": 108,
-                "width": 72,
-                "height": 72
-            }
-        },
         "signage-data/main_8agpz": {
             "component": "signage-data/main",
             "metadata": {
                 "label": "signage-data/main",
-                "x": 396,
-                "y": 180,
+                "x": 252,
+                "y": 216,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "signage-business/main_5ghv3": {
+            "component": "signage-business/main",
+            "metadata": {
+                "label": "signage-business/main",
+                "x": 252,
+                "y": 72,
                 "width": 72,
                 "height": 72
             }

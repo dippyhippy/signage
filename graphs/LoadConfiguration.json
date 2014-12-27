@@ -1,0 +1,213 @@
+{
+    "properties": {
+        "name": "LoadConfiguration",
+        "environment": {
+            "type": "all"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "filesystem/Stat_wmoq7": {
+            "component": "filesystem/Stat",
+            "metadata": {
+                "label": "filesystem/Stat",
+                "x": 36,
+                "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "filesystem/ReadFile_s64ja": {
+            "component": "filesystem/ReadFile",
+            "metadata": {
+                "label": "filesystem/ReadFile",
+                "x": 288,
+                "y": 36,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Output_kooi4": {
+            "component": "core/Output",
+            "metadata": {
+                "label": "core/Output",
+                "x": 684,
+                "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "objects/CreateObject_340qb": {
+            "component": "objects/CreateObject",
+            "metadata": {
+                "label": "objects/CreateObject",
+                "x": 180,
+                "y": 252,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "objects/SetPropertyValue_5x5f": {
+            "component": "objects/SetPropertyValue",
+            "metadata": {
+                "label": "objects/SetPropertyValue",
+                "x": 288,
+                "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "objects/SetPropertyValue_2l4g0": {
+            "component": "objects/SetPropertyValue",
+            "metadata": {
+                "label": "objects/SetPropertyValue",
+                "x": 432,
+                "y": 144,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "filesystem/WriteFile_oxggd": {
+            "component": "filesystem/WriteFile",
+            "metadata": {
+                "label": "filesystem/WriteFile",
+                "x": 540,
+                "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "filesystem/Stat_wmoq7",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "filesystem/ReadFile_s64ja",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "filesystem/ReadFile_s64ja",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Output_kooi4",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "filesystem/Stat_wmoq7",
+                "port": "error"
+            },
+            "tgt": {
+                "process": "objects/CreateObject_340qb",
+                "port": "start"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "objects/CreateObject_340qb",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "objects/SetPropertyValue_5x5f",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "objects/SetPropertyValue_5x5f",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "objects/SetPropertyValue_2l4g0",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "objects/SetPropertyValue_2l4g0",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "filesystem/WriteFile_oxggd",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "filesystem/WriteFile_oxggd",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Output_kooi4",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "data": "config.json",
+            "tgt": {
+                "process": "filesystem/Stat_wmoq7",
+                "port": "in"
+            }
+        },
+        {
+            "data": "utf-8",
+            "tgt": {
+                "process": "filesystem/ReadFile_s64ja",
+                "port": "encoding"
+            }
+        },
+        {
+            "data": "mode",
+            "tgt": {
+                "process": "objects/SetPropertyValue_5x5f",
+                "port": "property"
+            }
+        },
+        {
+            "data": "server",
+            "tgt": {
+                "process": "objects/SetPropertyValue_5x5f",
+                "port": "value"
+            }
+        },
+        {
+            "data": "port",
+            "tgt": {
+                "process": "objects/SetPropertyValue_2l4g0",
+                "port": "property"
+            }
+        },
+        {
+            "data": "8000",
+            "tgt": {
+                "process": "objects/SetPropertyValue_2l4g0",
+                "port": "value"
+            }
+        },
+        {
+            "data": "config.json",
+            "tgt": {
+                "process": "filesystem/WriteFile_oxggd",
+                "port": "filename"
+            }
+        }
+    ]
+}
