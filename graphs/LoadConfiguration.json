@@ -13,8 +13,8 @@
             "component": "filesystem/Stat",
             "metadata": {
                 "label": "filesystem/Stat",
-                "x": 36,
-                "y": 180,
+                "x": 72,
+                "y": 0,
                 "width": 72,
                 "height": 72
             }
@@ -23,8 +23,8 @@
             "component": "filesystem/ReadFile",
             "metadata": {
                 "label": "filesystem/ReadFile",
-                "x": 288,
-                "y": 36,
+                "x": 540,
+                "y": -108,
                 "width": 72,
                 "height": 72
             }
@@ -33,8 +33,8 @@
             "component": "core/Output",
             "metadata": {
                 "label": "core/Output",
-                "x": 684,
-                "y": 180,
+                "x": 1116,
+                "y": 36,
                 "width": 72,
                 "height": 72
             }
@@ -44,7 +44,7 @@
             "metadata": {
                 "label": "objects/CreateObject",
                 "x": 180,
-                "y": 252,
+                "y": 72,
                 "width": 72,
                 "height": 72
             }
@@ -54,7 +54,7 @@
             "metadata": {
                 "label": "objects/SetPropertyValue",
                 "x": 288,
-                "y": 180,
+                "y": 72,
                 "width": 72,
                 "height": 72
             }
@@ -64,7 +64,7 @@
             "metadata": {
                 "label": "objects/SetPropertyValue",
                 "x": 432,
-                "y": 144,
+                "y": 72,
                 "width": 72,
                 "height": 72
             }
@@ -73,8 +73,38 @@
             "component": "filesystem/WriteFile",
             "metadata": {
                 "label": "filesystem/WriteFile",
+                "x": 684,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "strings/Jsonify_7figb": {
+            "component": "strings/Jsonify",
+            "metadata": {
+                "label": "strings/Jsonify",
                 "x": 540,
-                "y": 180,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "strings/ParseJson_827jt": {
+            "component": "strings/ParseJson",
+            "metadata": {
+                "label": "strings/ParseJson",
+                "x": 936,
+                "y": 36,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "handyman/Log_xqcoy": {
+            "component": "handyman/Log",
+            "metadata": {
+                "label": "handyman/Log",
+                "x": 864,
+                "y": -144,
                 "width": 72,
                 "height": 72
             }
@@ -88,17 +118,6 @@
             },
             "tgt": {
                 "process": "filesystem/ReadFile_s64ja",
-                "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "filesystem/ReadFile_s64ja",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "core/Output_kooi4",
                 "port": "in"
             },
             "metadata": {}
@@ -144,6 +163,19 @@
                 "port": "out"
             },
             "tgt": {
+                "process": "strings/Jsonify_7figb",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "strings/Jsonify_7figb",
+                "port": "out"
+            },
+            "tgt": {
                 "process": "filesystem/WriteFile_oxggd",
                 "port": "in"
             },
@@ -155,10 +187,49 @@
                 "port": "out"
             },
             "tgt": {
-                "process": "core/Output_kooi4",
+                "process": "filesystem/ReadFile_s64ja",
                 "port": "in"
             },
             "metadata": {}
+        },
+        {
+            "src": {
+                "process": "filesystem/ReadFile_s64ja",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "strings/ParseJson_827jt",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "strings/ParseJson_827jt",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Output_kooi4",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "filesystem/Stat_wmoq7",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "handyman/Log_xqcoy",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
         },
         {
             "data": "config.json",
@@ -207,6 +278,13 @@
             "tgt": {
                 "process": "filesystem/WriteFile_oxggd",
                 "port": "filename"
+            }
+        },
+        {
+            "data": true,
+            "tgt": {
+                "process": "strings/Jsonify_7figb",
+                "port": "pretty"
             }
         }
     ]
