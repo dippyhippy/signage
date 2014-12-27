@@ -13,8 +13,18 @@
             "component": "signage-comms/main",
             "metadata": {
                 "label": "signage-comms/main",
-                "x": 288,
+                "x": 252,
                 "y": 108,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "signage-data/main_8agpz": {
+            "component": "signage-data/main",
+            "metadata": {
+                "label": "signage-data/main",
+                "x": 396,
+                "y": 180,
                 "width": 72,
                 "height": 72
             }
