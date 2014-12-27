@@ -3,27 +3,39 @@
         "name": "LoadConfiguration",
         "environment": {
             "type": "all"
-        }
+        },
+        "icon": ""
     },
     "inports": {},
-    "outports": {},
+    "outports": {
+        "log": {
+            "process": "Log",
+            "port": "out",
+            "metadata": {
+                "x": 648,
+                "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "config": {
+            "process": "strings/ParseJson_827jt",
+            "port": "out",
+            "metadata": {
+                "x": 432,
+                "y": 0,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
     "groups": [],
     "processes": {
         "filesystem/ReadFile_s64ja": {
             "component": "filesystem/ReadFile",
             "metadata": {
                 "label": "filesystem/ReadFile",
-                "x": 0,
-                "y": 72,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "core/Output_kooi4": {
-            "component": "core/Output",
-            "metadata": {
-                "label": "core/Output",
-                "x": 360,
+                "x": -72,
                 "y": 36,
                 "width": 72,
                 "height": 72
@@ -33,7 +45,7 @@
             "component": "filesystem/WriteFile",
             "metadata": {
                 "label": "filesystem/WriteFile",
-                "x": 288,
+                "x": 324,
                 "y": 180,
                 "width": 72,
                 "height": 72
@@ -43,8 +55,8 @@
             "component": "strings/ParseJson",
             "metadata": {
                 "label": "strings/ParseJson",
-                "x": 180,
-                "y": 36,
+                "x": 288,
+                "y": 0,
                 "width": 72,
                 "height": 72
             }
@@ -59,11 +71,21 @@
                 "height": 72
             }
         },
-        "strings/ParseJson_7hwpd": {
-            "component": "strings/ParseJson",
+        "strings/Jsonify_jm8na": {
+            "component": "strings/Jsonify",
             "metadata": {
-                "label": "strings/ParseJson",
+                "label": "strings/Jsonify",
                 "x": 144,
+                "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "Log": {
+            "component": "core/Merge",
+            "metadata": {
+                "label": "Log",
+                "x": 504,
                 "y": 180,
                 "width": 72,
                 "height": 72
@@ -97,19 +119,6 @@
         },
         {
             "src": {
-                "process": "strings/ParseJson_827jt",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "core/Output_kooi4",
-                "port": "in"
-            },
-            "metadata": {
-                "route": null
-            }
-        },
-        {
-            "src": {
                 "process": "filesystem/ReadFile_s64ja",
                 "port": "error"
             },
@@ -125,7 +134,7 @@
                 "port": "out"
             },
             "tgt": {
-                "process": "strings/ParseJson_7hwpd",
+                "process": "strings/Jsonify_jm8na",
                 "port": "in"
             },
             "metadata": {
@@ -134,7 +143,7 @@
         },
         {
             "src": {
-                "process": "strings/ParseJson_7hwpd",
+                "process": "strings/Jsonify_jm8na",
                 "port": "out"
             },
             "tgt": {
@@ -142,6 +151,19 @@
                 "port": "in"
             },
             "metadata": {}
+        },
+        {
+            "src": {
+                "process": "filesystem/WriteFile_oxggd",
+                "port": "error"
+            },
+            "tgt": {
+                "process": "Log",
+                "port": "in"
+            },
+            "metadata": {
+                "route": null
+            }
         },
         {
             "data": "utf-8",
@@ -162,6 +184,13 @@
             "tgt": {
                 "process": "filesystem/ReadFile_s64ja",
                 "port": "in"
+            }
+        },
+        {
+            "data": true,
+            "tgt": {
+                "process": "strings/Jsonify_jm8na",
+                "port": "pretty"
             }
         }
     ]
