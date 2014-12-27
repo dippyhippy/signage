@@ -8,27 +8,6 @@
     "inports": {},
     "outports": {},
     "groups": [],
-    "processes": {
-        "signage-data/main_8agpz": {
-            "component": "signage-data/main",
-            "metadata": {
-                "label": "signage-data/main",
-                "x": 252,
-                "y": 216,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "signage-business/main_5ghv3": {
-            "component": "signage-business/main",
-            "metadata": {
-                "label": "signage-business/main",
-                "x": 252,
-                "y": 72,
-                "width": 72,
-                "height": 72
-            }
-        }
-    },
+    "processes": {},
     "connections": []
 }
