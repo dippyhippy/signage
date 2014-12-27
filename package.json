@@ -27,6 +27,7 @@
     "noflo-nodejs": "0.0.6",
     "noflo-objects": "^0.1.12",
     "noflo-strings": "^0.1.9",
+    "signage-business": "git://github.com/dippyhippy/signage-business",
     "signage-comms": "git://github.com/dippyhippy/signage-comms",
     "signage-data": "git://github.com/dippyhippy/signage-data"
   },
