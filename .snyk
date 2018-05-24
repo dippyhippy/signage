@@ -1,0 +1,12 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:minimatch:20160620':
+    - noflo-flow > noflo-cache > noflo > read-installed > read-package-json > glob > minimatch:
+        patched: '2018-05-24T02:31:40.174Z'
+    - noflo-flow > noflo-cache > noflo-swiss > noflo > read-installed > read-package-json > glob > minimatch:
+        patched: '2018-05-24T02:31:40.174Z'
+    - noflo-flow > noflo-cache > noflo-swiss > noflo-test > noflo > babel-core > minimatch:
+        patched: '2018-05-24T02:31:40.174Z'
