@@ -1,0 +1,8 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.12.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:lodash:20180130':
+    - noflo-flow > noflo-cache > noflo-swiss > noflo-test > noflo > babel-core > lodash:
+        patched: '2018-07-03T05:17:41.623Z'
