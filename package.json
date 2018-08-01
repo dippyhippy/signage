@@ -28,7 +28,7 @@
     "noflo-filesystem": "^1.0.6",
     "noflo-flow": "^0.3.4",
     "noflo-handyman": "0.0.9",
-    "noflo-nodejs": "0.0.6",
+    "noflo-nodejs": "0.8.0",
     "noflo-objects": "^0.1.12",
     "noflo-strings": "^0.1.9",
     "signage-business": "git://github.com/dippyhippy/signage-business",
