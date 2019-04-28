@@ -1,0 +1,25 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.3
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:lodash:20180130':
+    - noflo-flow > noflo-cache > noflo-swiss > noflo-test > noflo > babel-core > lodash:
+        patched: '2019-04-28T06:18:06.714Z'
+  'npm:mime:20170907':
+    - noflo-couchdb > nano > request > mime:
+        patched: '2019-04-28T06:18:06.714Z'
+    - noflo-couchdb > nano > request > form-data > mime:
+        patched: '2019-04-28T06:18:06.714Z'
+  'npm:minimatch:20160620':
+    - noflo-flow > noflo-cache > noflo-swiss > noflo-test > noflo > babel-core > minimatch:
+        patched: '2019-04-28T06:18:06.714Z'
+    - noflo-handyman > noflo > read-installed > read-package-json > glob > minimatch:
+        patched: '2019-04-28T06:18:06.714Z'
+    - noflo-flow > noflo-cache > noflo > read-installed > read-package-json > glob > minimatch:
+        patched: '2019-04-28T06:18:06.714Z'
+    - noflo-flow > noflo-cache > noflo-swiss > noflo > read-installed > read-package-json > glob > minimatch:
+        patched: '2019-04-28T06:18:06.714Z'
+  'npm:request:20160119':
+    - noflo-couchdb > nano > follow > request:
+        patched: '2019-04-28T06:18:06.714Z'
