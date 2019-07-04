@@ -17,7 +17,9 @@
     }
   ],
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "knockout": "^3.2.0",
@@ -33,7 +35,8 @@
     "noflo-strings": "^0.1.9",
     "signage-business": "git://github.com/dippyhippy/signage-business",
     "signage-comms": "git://github.com/dippyhippy/signage-comms",
-    "signage-data": "git://github.com/dippyhippy/signage-data"
+    "signage-data": "git://github.com/dippyhippy/signage-data",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -58,5 +61,6 @@
     "components": {
       "DefaultConfig": "components/DefaultConfig.coffee"
     }
-  }
+  },
+  "snyk": true
 }
