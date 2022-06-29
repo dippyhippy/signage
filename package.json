@@ -24,7 +24,7 @@
     "knockout.mapping": "^2.4.3",
     "nano": "^6.0.2",
     "noflo": "~0.5.0",
-    "noflo-couchdb": "^1.0.1",
+    "noflo-couchdb": "^2.0.0",
     "noflo-filesystem": "^1.0.6",
     "noflo-flow": "^0.3.4",
     "noflo-handyman": "0.0.9",
