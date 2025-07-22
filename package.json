@@ -22,7 +22,7 @@
   "dependencies": {
     "knockout": "^3.2.0",
     "knockout.mapping": "^2.4.3",
-    "nano": "^6.0.2",
+    "nano": "^9.0.0",
     "noflo": "~0.5.0",
     "noflo-couchdb": "^1.0.1",
     "noflo-filesystem": "^1.0.6",
